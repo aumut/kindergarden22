@@ -1,0 +1,78 @@
+//GENERAL STYLES
+*
+  box-sizing: border-box
+  &:focus, &:active
+    outline: none !important
+
+.body-wrap
+  display: flex
+  flex-direction: column
+  height: 100%
+
+
+h1, h2, h3, h4, p, ul, ol
+  margin: 0px    
+  padding: 0px
+
+a
+  display: inline-block
+  text-decoration: none
+  color: inherit
+  transition: color .5s ease-out 0s
+  &:hover, &:active
+    text-decoration: none
+    color: $accentcolor
+
+ul
+  list-style: none
+
+.title
+  font-weight: $semiBold
+  word-break: break-word
+
+
+//LOGO
+.logo
+  display: flex
+  align-items: center
+  &>a
+    width: 100%
+    height: 100%
+  img
+    max-width: 100%
+    height: 100%
+    object-fit: contain  
+
+
+//BUTTON 
+.btn
+  position: relative
+  text-decoration: none
+  -webkit-appearance: none
+  border: 0
+  cursor: pointer
+  user-select: none
+  outline: none
+  background-color: transparent
+  padding: 0
+  font-size: inherit
+  &:focus, &:active, &.focus, &:hover
+    outline: none
+    box-shadow: none
+    color: inherit
+
+
+.img-wrap
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.bl-acnt
+  &-in
+    background: $accentcolor
+    color: $accentfontcolor
+    +adaptiv-value("padding-left", 20, 10)
+    +adaptiv-value("padding-right", 20, 10)
+  h2.title
+    color: $accentfontcolor

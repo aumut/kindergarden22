@@ -1,0 +1,116 @@
+//-------------- menu
+
+.menu
+  display: flex
+  justify-content: flex-start
+  flex-direction: column
+  +adaptiv-value("font-size", $fs_menu, $fs_menu_mob)
+  line-height: 1.115
+
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100vh
+  background-color: $accentcolor
+  display: none
+  overflow: auto
+  transition: all 0.5s ease 0s
+  z-index: 1002
+  padding: 20px 0 20px 20px
+
+  +tablet
+    flex-direction: row
+    position: static
+    height: auto
+    overflow: unset
+    display: flex
+    justify-content: space-between
+
+  a
+    color: $accentfontcolor
+    padding: 30px 80px 29px
+    +adaptiv-value("padding-left", 80, 10)
+    +adaptiv-value("padding-right", 80, 5)
+
+
+.burger
+  +adaptiv-value("margin-left", 13, 13)
+  display: block
+  position: relative
+  z-index: 1003
+  +adaptiv-value("width", 18, 18)
+  +adaptiv-value("height", 18, 12)
+  
+
+  +tablet
+    display: none
+    order: unset
+    margin-left: 0
+
+  &::before, &::after
+    content: ''
+    position: absolute
+    width: 100%
+    height: 2px
+    left: 0
+    background-color: $fontcolor
+    transition: all 0.5s ease 0s
+    border-radius: 2px
+  &::before
+    top: 0
+  &::after
+    bottom: 0
+
+  span
+    position: absolute
+    background-color: $fontcolor
+    left: 0
+    width: 100%
+    height: 3px
+    top: 5px
+    transition: all 0.5s ease 0s
+    border-radius: 2px
+
+  //&.active
+    //width: 36px
+    //height: 36px
+    //position: fixed
+    //right: 0
+    //top: 1px
+
+    //&::before, &::after
+      //width: 70%
+      //left: 6px
+      //background-color: $accentfontcolor
+    //&::before
+      //transform: rotate(45deg)
+      //top: 18px
+    //span
+      //transform: scale(0)
+    //&::after
+      //transform: rotate(-45deg)
+      //bottom: 16px
+
+.header.active
+  .menu
+    display: flex
+  .burger
+    width: 36px
+    height: 36px
+    position: fixed
+    right: 0
+    top: 1px
+
+    &::before, &::after
+      width: 70%
+      left: 6px
+      background-color: $accentfontcolor
+    &::before
+      transform: rotate(45deg)
+      top: 18px
+    span
+      transform: scale(0)
+    &::after
+      transform: rotate(-45deg)
+      bottom: 16px

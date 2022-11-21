@@ -1,0 +1,121 @@
+
+
+.form-control
+   background-color: transparent
+   border: 0
+   border-bottom: 1px solid $grey6
+   border-radius: 0
+   padding: 6px 0
+   font-size: inherit
+   line-height: $lh_body
+   color: $fontcolor
+
+
+   &:focus
+      color: $fontcolor
+      background-color: transparent
+      border-color: $accentColor
+      outline: 0
+      box-shadow: none
+
+.form-group label
+   +adaptiv-value("font-size", 12, 12)
+   line-height: $lh_body
+
+.error__text
+   display: none
+
+.error
+   label
+      color: $red
+
+   .error__text
+      color: $red
+      display: inline-block
+   .form-control
+      border-bottom-color: $red
+
+form
+   input.error, form-control.error
+      border: 0!important
+      border-bottom: 1px solid $red!important
+      &+span
+         color: $red
+
+.hint 
+   font-size: 10px
+   line-height: 1.2
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active 
+   transition: background-color 5000s ease-in-out 0s
+
+input:-webkit-autofill
+   -webkit-text-fill-color: $fontcolor !important
+
+
+.search-label.inBl
+   flex-grow: 1
+   background-color: $grey1
+   border-radius: $field_br
+   padding-left: 10px
+   padding-right: 7px
+   display: flex
+   align-items: center
+   justify-content: space-between
+   margin: 0
+   max-height: 30px
+   overflow: hidden
+   .search-field
+      background: transparent
+      +adaptiv-value("padding-top", 7, 7)
+      +adaptiv-value("padding-bottom", 7, 7)
+
+   &+.btn--filled
+      max-height: 30px
+
+
+
+.btn-search-filter
+   background-color: #777575
+   border-color: transparent
+   +adaptiv-value("padding-top", 2, 2)
+   +adaptiv-value("padding-right", 7, 7)
+   +adaptiv-value("padding-bottom", 2, 2)
+   +adaptiv-value("padding-left", 7, 7)
+   display: flex
+   column-gap: 0px
+   align-items: center
+   justify-content: center
+   text-transform: unset
+   border-radius: $field_br
+   align-self: flex-start
+   font-weight: $semiBold
+   +tablet
+      +adaptiv-value("padding-right", 10, 10)
+   .svg-icon
+      margin-right: 0px
+      +adaptiv-value("width", 17, 17)
+      +adaptiv-value("height", 15, 15)
+      +adaptiv-value("min-width", 17, 17)
+      +adaptiv-value("min-height", 15, 15)
+      fill: #FFF
+      margin-right: 3px
+   &:hover
+      background-color: #777575
+      border-color: transparent
+      color: $violetta1
+      .svg-icon
+         fill: $violetta1
+   &:active, &:focus
+      background-color: transparent
+      border-color: $accentColor 
+      .svg-icon
+         fill: #FFF   
+   &:active:hover, &:focus:hover
+      .svg-icon
+         fill: $violetta1          
+
+
