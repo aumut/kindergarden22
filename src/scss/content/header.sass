@@ -57,6 +57,7 @@ h1.title
     display: flex
     justify-content: space-between
     flex-direction: column
+    margin-bottom: 20px
     +laptop
       flex-direction: row
 
@@ -80,6 +81,12 @@ h1.title
   .news-itm:not(:last-child)
     +adaptiv-value("margin-bottom", 20, 10)
 
+  &-in
+    display: flex
+    flex-direction: column
+
+  .btn-frm
+    align-self: flex-end
 
 .date
   &-wrap
@@ -99,7 +106,7 @@ h1.title
     +adaptiv-value("margin-bottom", 10, 5)
 
 .bl-txt
-  p
+  p:not(:last-child)
     +adaptiv-value("margin-bottom", 20, 10)
 
 //-------------- NEWS ITEM
@@ -172,6 +179,10 @@ h1.title
   flex-direction: column
   &:not(:last-child)
     +adaptiv-value("margin-bottom", 20, 10)
+
+.fld-textarea
+  height: 167px
+  min-height: 167px
   
 .btn-frm
   background: $formbtnbg
@@ -183,7 +194,7 @@ h1.title
 //-------------- FOOTER
 .footer
   &-in
-    +adaptiv-value("padding-top", 50, 20)
+    +adaptiv-value("padding-top", 30, 20)
     
 .copyright
     text-align: center
@@ -211,3 +222,10 @@ h1.title
     +tablet
       margin-bottom: 0
 
+.adr
+  +tablet
+    width: 300px
+
+
+.doc-wrap
+  overflow-x: scroll

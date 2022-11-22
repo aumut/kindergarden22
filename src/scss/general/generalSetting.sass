@@ -12,6 +12,8 @@ body
   padding: 0
   height: 100vh
   background-color: $bgcolor
+  background-image: url(../img/bg1.jpg)
+  
   +adaptiv-value("font-size", $fs_body, $fs_mob)
 
 //CONTAINER  
@@ -22,11 +24,11 @@ body
   padding-left: $contPlMob+px
   padding-right: $contPlMob+px
   +tablet
-    padding-left: $contPlTablet+px
-    padding-right: $contPlTablet+px
+    //padding-left: $contPlTablet+px
+    //padding-right: $contPlTablet+px
   +laptop
-    padding-left: $contPl+px
-    padding-right: $contPl+px
+    //padding-left: $contPl+px
+    //padding-right: $contPl+px
 
 
 //LINK
@@ -57,6 +59,7 @@ h2
     +adaptiv-value("padding-bottom", 30, 10)
     text-align: center
     color: $accentcolor
+    margin-top: 55px
 
 h3
   &.title
