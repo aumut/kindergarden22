@@ -89,7 +89,7 @@ div#n2-ss-2 .n2-ss-slide-limiter
 
 
 div#n2-ss-2 .nextend-arrow img
-  display: none
+  display: none!important
 
 //.n2-ss-slider .n2-ss-slider-controls-absolute-left-center>*
   //transform: scaleX(-1)
@@ -100,19 +100,21 @@ div#n2-ss-2 .nextend-arrow img
 div#n2-ss-2 .nextend-bar-horizontal
   border-radius: 0
   justify-content: space-between
+  &::before
+    display: none
 
 div#n2-ss-2 .n2-style-ce5a58234dcbec0706d91fce72300923-simple
   opacity: 1
-  padding: 15px 20px
+  padding: 15px 20px!important
   box-shadow: none
-  border: 0px
-  border-radius: 0px
-  background: $accentcolor
-  color: $accentfontcolor
-  width: 100%
+  border: 0px !important
+  border-radius: 0px !important
+  background: $accentcolor !important
+  color: $accentfontcolor !important
+  width: 100% !important
 
 div#n2-ss-2 .nextend-bar-horizontal div *
-  display: block
+  display: block!important
   font-family: $ComfortaaRegular
   font-size: 16px
   line-height: 1.18
