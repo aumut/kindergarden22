@@ -1,5 +1,7 @@
 .sliderTh
   display: flex
+  max-width: 1200px
+  position: relative
 
 .slideTh
   display: flex
@@ -8,22 +10,39 @@
   background: $accentcolor
   color: $accentfontcolor
   width: 345px
+  min-width: 345px
   max-width: 345px
   height: 576px
   min-height: 576px
   border-radius: 5px
   
-  
+
+  &:not(:last-child)
+    margin-right: 80px  
 
   &-text
     .title
       margin-bottom: 10px
 
-  .slideTh-txt
-    margin-bottom: 10px
 
-  &:not(:last-child)
-    margin-right: 80px
+  &-txt
+    overflow: hidden
+    display: -webkit-box
+    -webkit-line-clamp: 4
+    -webkit-box-orient: vertical
+    line-height: 1.18
+    height: 75px
+
+
+  &-pos
+    margin-bottom: 10px
+    overflow: hidden
+    display: -webkit-box
+    -webkit-line-clamp: 1
+    -webkit-box-orient: vertical
+    line-height: 1.18
+    height: 20px
+
 
   &-img
     margin-bottom: 10px
@@ -63,13 +82,20 @@
 
 
   &-r
-    right: 0
+    right: -117px
     transform: scaleX(-1)
   &-l
-    left: 0
+    left: -117px
 
 .sliderTh-wrap
-  position: relative
+  overflow: hidden
+
+.bl-teachers-in
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+
 
 
 
