@@ -18,6 +18,8 @@
   transition: all 0.5s ease 0s
   z-index: 1002
   padding: 0
+  padding-top: 50px
+  text-align: center
 
   +tablet
     flex-direction: row
@@ -26,12 +28,18 @@
     overflow: unset
     display: flex
     justify-content: space-between
+    padding-top: 0
 
   a
     color: $accentfontcolor
-    padding: 30px 80px 29px
+    //padding: 30px 80px 29px
     +adaptiv-value("padding-left", 80, 10)
     +adaptiv-value("padding-right", 80, 5)
+    +adaptiv-value("padding-top", 30, 15)
+    +adaptiv-value("padding-bottom", 29, 15)
+    width: 100%
+    +tablet
+      width: unset
 
 
 .burger

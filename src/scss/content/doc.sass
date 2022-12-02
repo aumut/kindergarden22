@@ -1,0 +1,22 @@
+
+//-------------- DOCUMENTS
+.doc-wrap
+  overflow-x: scroll
+  +adaptiv-value("margin-bottom", 20, 10)
+  +adaptiv-value("font-size", 16, 12)
+  padding: 0 20px
+  +tablet
+    padding: 0
+
+.bl-doc-in
+  display: flex
+  flex-direction: column
+  .btn-link
+    align-self: flex-end
+  h2.title
+    //padding-bottom: 20px
+    +adaptiv-value("padding-bottom", 20, 10)
+
+.docPage
+  margin-bottom: 50px
+  +adaptiv-value("margin-bottom", 50, 25)
