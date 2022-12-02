@@ -7,31 +7,40 @@
 
 .sliderThWrap
   display: flex
-  padding-left: 100px
+  //padding-left: 100px
+  +adaptiv-value("padding-left", 100, 50)
 
 .slideTh
   display: flex
   flex-direction: column
-  padding: 10px
+  //padding: 10px
+  +adaptiv-value("padding", 10, 5)
   background: $accentcolor
   color: $accentfontcolor
-  width: 345px
-  min-width: 345px
-  max-width: 345px
-  height: 576px
-  min-height: 576px
+  //width: 345px
+  +adaptiv-value("width", 345, 175)
+  +adaptiv-value("min-width", 345, 175)
+  //min-width: 345px
+  +adaptiv-value("max-width", 345, 175)
+  //max-width: 345px
+  +adaptiv-value("height", 576, 288)
+  +adaptiv-value("min-height", 576, 288)
+  //height: 576px
+  //min-height: 576px
   border-radius: 5px
   
 
   &:not(:last-child)
-    margin-right: 104px  
+    //margin-right: 104px 
+    +adaptiv-value("margin-right", 104, 52) 
 
   &:hover
     color: $accentfontcolor
 
   &-text
     .title
-      margin-bottom: 10px
+      //margin-bottom: 10px
+      +adaptiv-value("margin-bottom", 10, 5) 
 
 
   &-txt
@@ -41,6 +50,7 @@
     -webkit-box-orient: vertical
     line-height: 1.18
     height: 75px
+    //+adaptiv-value("height", 75, 37.5) 
 
 
   &-pos
@@ -56,8 +66,10 @@
   &-img
     margin-bottom: 10px
     flex-grow: 1
-    height: 400px
-    min-height: 400px
+    //height: 400px
+    //min-height: 400px
+    +adaptiv-value("height", 400, 200) 
+    +adaptiv-value("min-height", 400, 200) 
     img
       width: 100%
       height: 100%
@@ -68,18 +80,20 @@
   top: 50%
   margin-top: calc(-70px/2)
 
-  width: 70px
-  height: 70px
-  min-width: 70px
-  height: 70px
+  //width: 70px
+  //height: 70px
+  //min-width: 70px
+  //height: 70px
+  +adaptiv-value("width", 70, 45)
+  +adaptiv-value("min-width", 70, 45)
+  +adaptiv-value("height", 70, 45)
+  +adaptiv-value("min-height", 70, 45)
   border-radius: 50%
   background: $accentcolor
   color: $accentfontcolor
-
   display: flex
   align-items: center
   justify-content: center
-
   z-index: 10
 
   &::before
@@ -88,6 +102,9 @@
     height: 0
     border-style: solid
     border-width: 20px 40px 20px 0
+    +adaptiv-value("border-top-width", 20, 10)
+    +adaptiv-value("border-right-width", 40, 20)
+    +adaptiv-value("border-bottom-width", 20, 10)
     border-color: transparent $accentfontcolor transparent transparent
     margin-right: 10px
 
@@ -102,15 +119,3 @@
   overflow: hidden
   position: relative
   
-
-
-.bl-teachers-in
-  display: flex
-  flex-direction: column
-  justify-content: center
-
-
-
-
-
-

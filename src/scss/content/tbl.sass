@@ -1,20 +1,31 @@
 .tbl
   &-head
     color: $accentcolor
+    .tbl-row
+      margin-bottom: 10px
   &-row
     display: grid
-    grid-template-columns: 20px auto 650px 60px 80px
-    margin-bottom: 10px
-    +adaptiv-value("grid-column-gap", 50, 10)
+    grid-template-columns: 20px auto 60px 80px
+    margin-bottom: 6px
+    +adaptiv-value("grid-column-gap", 55, 10)
     border-bottom: 1px solid $accentcolor
     padding-top: 10px
     padding-bottom: 10px
+    width: 100%
+    +tablet
+      grid-template-columns: 20px auto 650px 60px 80px
 
 .tbl-rows
   counter-reset: my-sec-counter
+  line-height: 1.15
 
   .td-num
     position: relative
     &::before
       counter-increment: my-sec-counter
       content: counter(my-sec-counter)
+
+.td-dsc
+  display: none
+  +tablet
+    display: block

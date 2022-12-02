@@ -2,6 +2,7 @@
   position: relative
   overflow: hidden
   margin: 20px auto 0 auto
+  +adaptiv-value("margin-top", 20, 10)
 
 
 .slider
@@ -19,7 +20,8 @@
   margin: 0
   padding: 0
   width: 100%
-  height: 614px
+  //height: 614px
+  +adaptiv-value("height", 614, 307)
   display: flex
   flex-direction: column
 
@@ -31,7 +33,11 @@
   &-txt
     background-color: $accentcolor
     color: $accentfontcolor
-    padding: 15px 20px
+    //padding: 15px 20px
+    +adaptiv-value("padding-top", 15, 7)
+    +adaptiv-value("padding-bottom", 15, 7)
+    +adaptiv-value("padding-left", 20, 10)
+    +adaptiv-value("padding-right", 20, 10)
     position: absolute
     bottom: 0
     left: 0
@@ -43,8 +49,10 @@ a.control_prev, a.control_next
   top: 40%
   z-index: 999
   display: flex
-  width: 80px
-  height: 80px
+  //width: 80px
+  //height: 80px
+  +adaptiv-value("width", 80, 40)
+  +adaptiv-value("height", 80, 40)
   background: $accentcolor
   color: $accentfontcolor
   opacity: 0.8
@@ -66,10 +74,14 @@ div#n2-ss-2 .n2-ss-slide-limiter
   max-width: 1200px
 
 .n2-ss-slider .n2-ss-widget
-  width: 70px
-  height: 70px
-  min-width: 70px
-  height: 70px
+  //width: 70px
+  //height: 70px
+  //min-width: 70px
+  //height: 70px
+  +adaptiv-value("width", 70, 35)
+  +adaptiv-value("min-width", 70, 35)
+  +adaptiv-value("height", 70, 35)
+  +adaptiv-value("min-height", 70, 35)
   border-radius: 50%
   background: $accentcolor
   color: $accentfontcolor
@@ -84,8 +96,12 @@ div#n2-ss-2 .n2-ss-slide-limiter
     height: 0
     border-style: solid
     border-width: 20px 40px 20px 0
+    +adaptiv-value("border-top-width", 20, 10)
+    +adaptiv-value("border-right-width", 40, 20)
+    +adaptiv-value("border-bottom-width", 20, 10)
     border-color: transparent $accentfontcolor transparent transparent
     margin-right: 10px
+    +adaptiv-value("margin-right", 10, 5)
 
 
 div#n2-ss-2 .nextend-arrow img
