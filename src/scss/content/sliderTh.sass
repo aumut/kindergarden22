@@ -4,6 +4,7 @@
   position: relative
   align-self: center
   transition: right 500ms
+  width: 100%
 
 .sliderThWrap
   display: flex
@@ -17,18 +18,34 @@
   +adaptiv-value("padding", 10, 5)
   background: $accentcolor
   color: $accentfontcolor
-  //width: 345px
-  +adaptiv-value("width", 345, 175)
-  +adaptiv-value("min-width", 345, 175)
-  //min-width: 345px
-  +adaptiv-value("max-width", 345, 175)
-  //max-width: 345px
-  +adaptiv-value("height", 576, 288)
-  +adaptiv-value("min-height", 576, 288)
-  //height: 576px
-  //min-height: 576px
+  
+  //+adaptiv-value("width", 345, 175)
+  //+adaptiv-value("min-width", 345, 175)
+  
+  //+adaptiv-value("max-width", 345, 175)
+  
+  //+adaptiv-value("height", 576, 288)
+  //+adaptiv-value("min-height", 576, 288)
+
   border-radius: 5px
   
+  width: 220px
+  min-width: calc(100% - calc(50px + 50 * ((100vw - 320px) / 1120)))
+  max-width: 220px
+  height: 324px
+  min-height: 324px
+  +phone
+    width: 455px
+    min-width: calc(50% - (50px + 50 * (100vw - 320px) / 1120))
+    max-width: 455px
+    height: 375px
+    min-height: 375px
+  +tablet
+    width: 345px
+    min-width: 345px
+    max-width: 345px
+    height: 576px
+    min-height: 576px
 
   &:not(:last-child)
     //margin-right: 104px 
@@ -118,4 +135,11 @@
 .sliderTh-wrap
   overflow: hidden
   position: relative
-  
+  +tablet-lg
+    max-width: unset
+
+    
+  +phone
+    max-width: 695px
+    margin: 0 auto
+
