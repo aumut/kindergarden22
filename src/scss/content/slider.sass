@@ -70,7 +70,7 @@ a.control_next
   right: 0
 
 
-div#n2-ss-2 .n2-ss-slide-limiter
+.n2-ss-slide-limiter
   max-width: 1200px
 
 .n2-ss-slider .n2-ss-widget
@@ -105,7 +105,7 @@ div#n2-ss-2 .n2-ss-slide-limiter
     +adaptiv-value("margin-right", 10, 5)
 
 
-div#n2-ss-2 .nextend-arrow img
+.nextend-arrow img
   display: none!important
 
 //.n2-ss-slider .n2-ss-slider-controls-absolute-left-center>*
@@ -114,14 +114,16 @@ div#n2-ss-2 .nextend-arrow img
 .n2-ss-slider .n2-ss-slider-controls-absolute-right-center>*
   transform: scaleX(-1)
 
-div#n2-ss-2 .nextend-bar-horizontal
+.nextend-bar-horizontal
   border-radius: 0
   justify-content: space-between
-  max-width: 1194px
+  max-width: 1194px!important
   &::before
     display: none
 
-div#n2-ss-2 .n2-style-ce5a58234dcbec0706d91fce72300923-simple
+//.n2-ss-slider .n2-ss-widget
+//div#n2-ss-2 .n2-style-ce5a58234dcbec0706d91fce72300923-simple
+.n2-ss-slider .n2-ss-widget > div
   opacity: 1
   padding: 5px 10px!important
   box-shadow: none
@@ -133,7 +135,7 @@ div#n2-ss-2 .n2-style-ce5a58234dcbec0706d91fce72300923-simple
   +tablet
     padding: 15px 20px!important
 
-div#n2-ss-2 .nextend-bar-horizontal div *
+.nextend-bar-horizontal div *
   display: block!important
   font-family: $ComfortaaRegular
   +adaptiv-value("font-size", 16, 11)
@@ -151,26 +153,30 @@ div#n2-ss-2 .nextend-bar-horizontal div *
 
 .n2-ss-slider .n2-ss-layer:not([data-sstype=col])
   width: 100%
-  height: 100%
+  //height: 100%
 
 .n2-ss-slider .n2-ss-item-image-content img
   object-fit: cover
+  height: 100%!important
   
 @media screen and (orientation: landscape) and (max-width: 1199px) and (min-width: 901px)
-  div#n2-ss-2 .n2-ss-slide-limiter
+  .n2-ss-slide-limiter
     max-width: 1200px!important
 
 @media screen and (orientation: portrait) and (max-width: 1199px) and (min-width: 701px)
-  div#n2-ss-2 .n2-ss-slide-limiter
+  .n2-ss-slide-limiter
     max-width: 1200px!important
   
 
-div#n2-ss-2 .n2-ss-slide-limiter
+.n2-ss-slide-limiter
   max-width: 1200px!important
 
-div#n2-ss-2 .n-uc-tykXImF01QvI-inner
+.n-uc-tykXImF01QvI-inner
   padding: 0!important
 
 @media screen and (orientation: landscape) and (max-width: 900px), (orientation: portrait) and (max-width: 700px)
-  .slider-wrapper div#n2-ss-2 [data-hide-mobileportrait="1"]
-    display: block!important
+  .slider-wrapper div[data-hide-mobileportrait="1"]
+    display: flex!important
+
+.n2-ss-slider .n2-ss-layer[data-sstype=content]
+  max-width: 1194px!important

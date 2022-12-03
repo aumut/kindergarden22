@@ -27,19 +27,21 @@
     height: auto
     overflow: unset
     display: flex
-    justify-content: space-between
+    justify-content: space-around
     padding-top: 0
 
   a
     color: $accentfontcolor
     //padding: 30px 80px 29px
-    +adaptiv-value("padding-left", 80, 10)
-    +adaptiv-value("padding-right", 80, 5)
+    padding-left: 5px
+    padding-right: 5px
     +adaptiv-value("padding-top", 30, 15)
     +adaptiv-value("padding-bottom", 29, 15)
     width: 100%
     +tablet
       width: unset
+      padding-left: 5px
+      padding-right: 5px
 
 
 .burger

@@ -32,17 +32,21 @@
   width: 220px
   min-width: calc(100% - calc(50px + 50 * ((100vw - 320px) / 1120)))
   max-width: 220px
-  height: 324px
-  min-height: 324px
+  height: 368px
+  min-height: 368px
   +phone
     width: 455px
     min-width: calc(50% - (50px + 50 * (100vw - 320px) / 1120))
     max-width: 455px
-    height: 375px
-    min-height: 375px
+    height: 417px
+    min-height: 417px
   +tablet
+    min-height: 426px
+  +tablet
+    min-height: 456px
+  +laptop
     width: 345px
-    min-width: 345px
+    min-width: calc(33% - (50px + 50 * (100vw - 320px) / 1120))
     max-width: 345px
     height: 576px
     min-height: 576px
@@ -51,7 +55,7 @@
     //margin-right: 104px 
     +adaptiv-value("margin-right", 104, 52) 
 
-  &:hover
+  &:hover, &:visited
     color: $accentfontcolor
 
   &-text
@@ -77,7 +81,7 @@
     -webkit-line-clamp: 1
     -webkit-box-orient: vertical
     line-height: 1.18
-    height: 20px
+    height: 15px
 
 
   &-img
@@ -135,11 +139,14 @@
 .sliderTh-wrap
   overflow: hidden
   position: relative
-  +tablet-lg
-    max-width: unset
 
-    
+  +laptop
+    max-width: 100%
+
+  +tablet-lg
+    max-width: 855px
+
   +phone
-    max-width: 695px
+    max-width: 570px
     margin: 0 auto
 
