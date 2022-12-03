@@ -89,6 +89,7 @@ div#n2-ss-2 .n2-ss-slide-limiter
   display: flex
   align-items: center
   justify-content: center
+  
 
   &::before
     content: ""
@@ -122,18 +123,20 @@ div#n2-ss-2 .nextend-bar-horizontal
 
 div#n2-ss-2 .n2-style-ce5a58234dcbec0706d91fce72300923-simple
   opacity: 1
-  padding: 15px 20px!important
+  padding: 5px 10px!important
   box-shadow: none
   border: 0px !important
   border-radius: 0px !important
   background: $accentcolor !important
   color: $accentfontcolor !important
   width: 100% !important
+  +tablet
+    padding: 15px 20px!important
 
 div#n2-ss-2 .nextend-bar-horizontal div *
   display: block!important
   font-family: $ComfortaaRegular
-  font-size: 16px
+  +adaptiv-value("font-size", 16, 11)
   line-height: 1.18
   margin-bottom: 10px
   color: $accentfontcolor
@@ -142,6 +145,17 @@ div#n2-ss-2 .nextend-bar-horizontal div *
 .n2-ss-slider .n2-ss-slider-wrapper-inside .n2-ss-slider-controls
   top: -9px
 
+.n2-ss-slider .n2-ss-layer-with-background,
+.n2-ss-slider .n2-ss-layer[data-sstype=slide]
+  padding: 0!important
+
+.n2-ss-slider .n2-ss-layer:not([data-sstype=col])
+  width: 100%
+  height: 100%
+
+.n2-ss-slider .n2-ss-item-image-content img
+  object-fit: cover
+  
 @media screen and (orientation: landscape) and (max-width: 1199px) and (min-width: 901px)
   div#n2-ss-2 .n2-ss-slide-limiter
     max-width: 1200px!important
@@ -156,3 +170,7 @@ div#n2-ss-2 .n2-ss-slide-limiter
 
 div#n2-ss-2 .n-uc-tykXImF01QvI-inner
   padding: 0!important
+
+@media screen and (orientation: landscape) and (max-width: 900px), (orientation: portrait) and (max-width: 700px)
+  .slider-wrapper div#n2-ss-2 [data-hide-mobileportrait="1"]
+    display: block!important
