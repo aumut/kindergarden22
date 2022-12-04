@@ -11,7 +11,9 @@
   padding: 0
   //height: 614px
   list-style: none
-
+  margin-bottom: 10px
+  +tablet
+    margin-bottom: 0
 
 .slide
   position: relative
@@ -140,12 +142,31 @@ a.control_next
   font-family: $ComfortaaRegular
   +adaptiv-value("font-size", 16, 11)
   line-height: 1.18
-  margin-bottom: 10px
+  margin-bottom: 2px
   color: $accentfontcolor
   font-style: normal
+  +tablet
+    margin-bottom: 10px
+
+[class ^= "n2-font-"]
+  height: 20px
+  overflow: hidden
+  display: -webkit-box
+  -webkit-line-clamp: 4
+  -webkit-box-orient: vertical
+  line-height: 1.3
+  text-overflow: ellipsis
+  +tablet
+    height: unset
+    overflow: unset
+    display: block
+    -webkit-line-clamp: unset
+    -webkit-box-orient: unset
+    text-overflow: unset
+
 
 .n2-ss-slider .n2-ss-slider-wrapper-inside .n2-ss-slider-controls
-  top: -9px
+  top: 0px
 
 .n2-ss-slider .n2-ss-layer-with-background,
 .n2-ss-slider .n2-ss-layer[data-sstype=slide]
@@ -153,7 +174,10 @@ a.control_next
 
 .n2-ss-slider .n2-ss-layer:not([data-sstype=col])
   width: 100%
-  //height: 100%
+  height: 100%
+
+.n2-ss-slider .n2-ss-item-image-content
+  height: 100%!important
 
 .n2-ss-slider .n2-ss-item-image-content img
   object-fit: cover
@@ -177,6 +201,11 @@ a.control_next
 @media screen and (orientation: landscape) and (max-width: 900px), (orientation: portrait) and (max-width: 700px)
   .slider-wrapper div[data-hide-mobileportrait="1"]
     display: flex!important
+
+@media screen and (orientation: landscape) and (max-width: 900px), (orientation: portrait) and (max-width: 700px)
+  .slider .slider-wrapper .slider-items div[id ^= "n2-ss"] div[id ^= "n2-ss-"][class ^= "n2-ss-"] [data-hide-mobileportrait="1"]
+    display: flex!important
+
 
 .n2-ss-slider .n2-ss-layer[data-sstype=content]
   max-width: 1194px!important

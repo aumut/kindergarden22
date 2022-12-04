@@ -12,7 +12,9 @@
   display: flex
   flex-direction: column
   .btn-link
-    align-self: flex-end
+    align-self: center
+    +tablet
+      align-self: flex-end
   h2.title
     //padding-bottom: 20px
     +adaptiv-value("padding-bottom", 20, 10)
