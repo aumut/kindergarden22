@@ -91,3 +91,24 @@ ul
 
   a:hover, a:active
     color: $accentfontcolor
+
+.topBtn
+  +adaptiv-value("width", 100, 50)
+  +adaptiv-value("min-width", 100, 50)
+  +adaptiv-value("height", 100, 50)
+  +adaptiv-value("min-height", 100, 50)
+  +adaptiv-value("padding", 10, 5)
+  background-color: $accentcolor
+  display: flex
+  flex-direction: column
+  position: fixed
+  bottom: 0
+  left: 0
+  z-index: 1000
+  cursor: pointer
+
+.svg-icon
+  width: 100%
+  height: 100%
+  fill: $accentfontcolor
+
